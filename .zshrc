@@ -25,9 +25,9 @@ eval "$(zoxide init --cmd=cd zsh)"
 # Aliases
 alias ls='eza --long --all --git --icons --time-style=iso --group --classify'
 alias tree="eza --all --tree --icons"
-alias brew-maint="$HOME/dotfiles-macos/scripts/brew-maintenance.sh"
-alias cleanup="$HOME/dotfiles-macos/scripts/system-cleanup.sh"
-alias tmux-s="$HOME/dotfiles-macos/scripts/tmux-setup.sh"
+alias brew-maint="$HOME/dotfiles/scripts/brew-maintenance.sh"
+alias cleanup="$HOME/dotfiles/scripts/system-cleanup.sh"
+alias tmux-s="$HOME/dotfiles/scripts/tmux-setup.sh"
 
 # Zsh Plugins
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
