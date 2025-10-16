@@ -7,7 +7,7 @@ log() {
 }
 
 confirm() {
-  log "This will REMOVE all dotfiles-macos symlinks, packages, and the repo."
+  log "This will REMOVE all dotfiles symlinks, packages, and the repo."
   read -rp "Are you sure? (y/N): " CONFIRM
   if [[ "$CONFIRM" != "y" ]]; then
     log "Aborted."
@@ -16,9 +16,9 @@ confirm() {
 }
 
 unstow_symlinks() {
-  if [[ -d "$HOME/dotfiles-macos" ]]; then
+  if [[ -d "$HOME/dotfiles" ]]; then
     log "Removing symlinks..."
-    pushd "$HOME/dotfiles-macos" >/dev/null
+    pushd "$HOME/dotfiles" >/dev/null
     stow -D .
     popd >/dev/null
   fi
@@ -79,8 +79,8 @@ remove_gopls() {
 }
 
 remove_repo() {
-  log "Deleting dotfiles-macos repository..."
-  rm -rf "$HOME/dotfiles-macos"
+  log "Deleting dotfiles repository..."
+  rm -rf "$HOME/dotfiles"
 }
 
 main() {
@@ -91,7 +91,7 @@ main() {
   remove_gopls
   remove_repo
   cleanup_brew
-  log "craftslad dotfiles-macos rollback completed! 🌴"
+  log "craftslad dotfiles rollback completed! 🌴"
 }
 
 main "$@"

@@ -86,8 +86,8 @@ install_languages() {
 }
 
 setup_dotfiles() {
-  local dotfiles="$HOME/dotfiles-macos"
-  local repo_url="${DOTFILES_REPO:-https://github.com/ryanjayleyva/dotfiles-macos.git}"
+  local dotfiles="$HOME/dotfiles"
+  local repo_url="${DOTFILES_REPO:-https://github.com/craftslad/dotfiles.git}"
 
   if [ ! -d "$dotfiles" ]; then
     log "Cloning dotfiles repository from $repo_url..."
@@ -111,7 +111,7 @@ setup_dotfiles() {
 }
 
 make_scripts_executable() {
-  local scripts_dir="$HOME/dotfiles-macos/scripts"
+  local scripts_dir="$HOME/dotfiles/scripts"
   if [ -d "$scripts_dir" ]; then
     log "Making all scripts executable in $scripts_dir..."
     chmod +x "$scripts_dir"/*.sh
@@ -129,7 +129,7 @@ main() {
   setup_dotfiles
   make_scripts_executable
   setup_neovim
-  log "craftslad dotfiles-macos setup completed! 🌴"
+  log "craftslad dotfiles setup completed! 🌴"
 }
 
 main "$@"
