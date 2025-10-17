@@ -24,6 +24,7 @@ vim.lsp.enable {
   'cssls',
   'emmet-language-server',
   'eslint',
+  'gopls',
   'lua_ls',
 }
 
