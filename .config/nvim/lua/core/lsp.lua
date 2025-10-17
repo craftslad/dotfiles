@@ -33,6 +33,7 @@ vim.lsp.enable {
   'pyright',
   'svelte',
   'vtsls',
+  'yamlls',
 }
 
 -- On LSP attach
