@@ -20,6 +20,10 @@ local inlay_hints = {
 
 -- LSP servers
 vim.lsp.enable {
+  'astro',
+  'cssls',
+  'emmet-language-server',
+  'eslint',
   'lua_ls',
 }
 
