@@ -31,6 +31,7 @@ vim.lsp.enable {
   'lua_ls',
   'marksman',
   'pyright',
+  'svelte',
 }
 
 -- On LSP attach
