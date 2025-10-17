@@ -30,7 +30,7 @@ vim.lsp.enable {
   'jsonls',
   'lua_ls',
   'marksman',
-  'pyryght',
+  'pyright',
 }
 
 -- On LSP attach
