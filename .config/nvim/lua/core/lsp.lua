@@ -32,6 +32,7 @@ vim.lsp.enable {
   'marksman',
   'pyright',
   'svelte',
+  'vtsls',
 }
 
 -- On LSP attach
