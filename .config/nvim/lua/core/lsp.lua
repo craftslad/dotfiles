@@ -21,6 +21,7 @@ local inlay_hints = {
 -- LSP servers
 vim.lsp.enable {
   'astro',
+  'cssls',
   'lua_ls',
 }
 
